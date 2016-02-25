@@ -31,7 +31,7 @@ namespace DotNetKoans.CSharp
             else
                 b = false;
 
-            Assert.Equal(FILL_ME_IN, b);
+            Assert.Equal(true, b);
 
         }
 
@@ -44,7 +44,7 @@ namespace DotNetKoans.CSharp
                 b = true;
             }
 
-            Assert.Equal(FILL_ME_IN, b);
+            Assert.Equal(true, b);
         }
 
         [Koan(4)]
@@ -54,7 +54,7 @@ namespace DotNetKoans.CSharp
             if (true)
                 b = true;
 
-            Assert.Equal(FILL_ME_IN, b);
+            Assert.Equal(true, b);
         }
 
         [Koan(5)]
@@ -69,8 +69,8 @@ namespace DotNetKoans.CSharp
                 b1 = true;
                 b2 = true;
 
-			Assert.Equal(FILL_ME_IN, b1);
-			Assert.Equal(FILL_ME_IN, b2);
+			Assert.Equal(false, b1);
+			Assert.Equal(true, b2);
         }
 
         [Koan(6)]

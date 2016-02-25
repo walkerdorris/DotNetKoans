@@ -237,36 +237,36 @@ broken line";
         public void LiteralStringsInterpretsEscapeCharacters()
         {
             var str = "\n";
-            Assert.Equal(FILL_ME_IN, str.Length);
+            Assert.Equal(1, str.Length);
         }
 
         [Koan(24)]
         public void VerbatimStringsDoNotInterpretEscapeCharacters()
         {
             var str = @"\n";
-            Assert.Equal(FILL_ME_IN, str.Length);
+            Assert.Equal(2, str.Length);
         }
 
         [Koan(25)]
         public void VerbatimStringsStillDoNotInterpretEscapeCharacters()
         {
             var str = @"\\\";
-            Assert.Equal(FILL_ME_IN, str.Length);
+            Assert.Equal(3, str.Length);
         }
 
         [Koan(28)]
         public void YouCanGetASubstringFromAString()
         {
             var str = "Bacon, lettuce and tomato";
-            Assert.Equal(FILL_ME_IN, str.Substring(19));
-            Assert.Equal(FILL_ME_IN, str.Substring(7, 3));
+            Assert.Equal("tomato", str.Substring(19));
+            Assert.Equal("let", str.Substring(7, 3));
         }
 
         [Koan(29)]
         public void YouCanGetASingleCharacterFromAString()
         {
             var str = "Bacon, lettuce and tomato";
-            Assert.Equal(FILL_ME_IN, str[0]);
+            Assert.Equal(66, str[0]);
         }
 
         [Koan(30)]
@@ -274,7 +274,7 @@ broken line";
         {
             Assert.Equal(97, 'a');
             Assert.Equal(98, 'b');
-            Assert.Equal(FILL_ME_IN, 'b' == ('a' + 1));
+            Assert.Equal(true, 'b' == ('a' + 1));
         }
 
         [Koan(31)]
@@ -282,7 +282,7 @@ broken line";
         {
             var str = "Sausage Egg Cheese";
             string[] words = str.Split();
-            Assert.Equal(new[] { FILL_ME_IN }, words);
+            Assert.Equal(new[] { "Sausage", "Egg", "Cheese" }, words);
         }
 
         [Koan(32)]
@@ -290,7 +290,7 @@ broken line";
         {
             var str = "the:rain:in:spain";
             string[] words = str.Split(':');
-            Assert.Equal(new[] { FILL_ME_IN }, words);
+            Assert.Equal(new[] { "the", "rain", "in", "spain" }, words);
         }
 
         [Koan(33)]
@@ -299,7 +299,7 @@ broken line";
             var str = "the:rain:in:spain";
             var regex = new System.Text.RegularExpressions.Regex(":");
             string[] words = regex.Split(str);
-            Assert.Equal(new[] { FILL_ME_IN }, words);
+            Assert.Equal(new[] { "the", "rain", "in", "spain" }, words);
 
             //A full treatment of regular expressions is beyond the scope
             //of this tutorial. The book "Mastering Regular Expressions"

@@ -38,22 +38,22 @@ namespace DotNetKoans.CSharp
 		[Koan(2)]
 		public void DelegatesCanBeInstantiated()
 		{
-			//MyMath math = new MyMath();
-			//BinaryOp op = new BinaryOp(math.Add);
-			//Assert.Equal(FILL_ME_IN, op.Method.Name);
+			MyMath math = new MyMath();
+			BinaryOp op = new BinaryOp(math.Add);
+			Assert.Equal("Add", op.Method.Name);
 		}
 		[Koan(3)]
 		public void DelegatesCanBeAssigned()
 		{
-			//MyMath math = new MyMath();
-			//BinaryOp op = math.Add;
-			//Assert.Equal(FILL_ME_IN, op.Method.Name);
+			MyMath math = new MyMath();
+			BinaryOp op = math.Add;
+			Assert.Equal("Add", op.Method.Name);
 		}
 		[Koan(4)]
 		public void DelegatesCanReferenceStaticMethods()
 		{
-			//BinaryOp op = MyMath.Subtract;
-			//Assert.Equal(FILL_ME_IN, op.Method.Name);
+			BinaryOp op = MyMath.Subtract;
+			Assert.Equal("Subtract", op.Method.Name);
 		}
 		[Koan(5)]
 		public void MethodsCalledViaDelegate()

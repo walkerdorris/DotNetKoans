@@ -291,8 +291,8 @@ namespace DotNetKoans.CSharp
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
 			dictionary["one"] = "uno";
-			Assert.Equal(FILL_ME_IN, dictionary.ContainsValue("uno"));
-			Assert.Equal(FILL_ME_IN, dictionary.ContainsValue("dos"));
+			Assert.Equal(true, dictionary.ContainsValue("uno"));
+			Assert.Equal(false, dictionary.ContainsValue("dos"));
 		}
 		[Koan(29)]
 		public void f()
@@ -311,9 +311,9 @@ namespace DotNetKoans.CSharp
 				one[item.Key] = item.Value;
 			}
 
-			Assert.Equal(FILL_ME_IN, one["jim"]);
-			Assert.Equal(FILL_ME_IN, one["jenny"]);
-			Assert.Equal(FILL_ME_IN, one["amy"]);
+			Assert.Equal(54, one["jim"]);
+			Assert.Equal(26, one["jenny"]);
+			Assert.Equal(20, one["amy"]);
 		}
 	}
 }
